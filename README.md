@@ -21,7 +21,8 @@ Transcriptor is an advanced transcription tool that leverages the OpenAI Whisper
 
 ## Installation
 
-To set up the Transcriptor project locally, you need to have Docker and Docker Compose installed on your machine.
+To set up the Transcriptor project locally, you need to create a virtual environment and load the requirements in the requirements.txt file in 
+the main folder after navigating the project directory
 
 1. Clone the repository (ssh example):
    ```sh
@@ -30,10 +31,21 @@ To set up the Transcriptor project locally, you need to have Docker and Docker C
 2. Navigate to the project directory:
    ```sh
    cd VerbalizeIt
-3. Use Docker Compose to build and run the containers:
+
+3. In order to run the backend ggo to the backend directory and start the FASTAPI server
    ```sh
-   docker-compose up --build
+   cd backend
+   uvicorn app:app --host 0.0.0.0 --port 8000
+
+4. After running the backend, you need to start the streamlit frontend in another terminal, go to the frontend folder and run the streamlit app
+   ```sh
+   cd frontend
+   streamlit run app.py
+
 ## Usage
 The frontend at: http://localhost:8501
 The backend at: http://localhost:8000
+
+### Future work
+Running the whole project in a dockerized environment
    

@@ -22,7 +22,8 @@ Transcriptor is an advanced transcription tool that leverages the OpenAI Whisper
 ## Installation
 
 To set up the Transcriptor project locally, you need to create a virtual environment and load the requirements in the requirements.txt file in 
-the main folder after navigating the project directory
+the main folder after navigating the project directory.
+This project requires ffmpeg module for real time transcriptions. Please install this module if necessary
 
 1. Clone the repository (ssh example):
    ```sh
